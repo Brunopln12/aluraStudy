@@ -1,3 +1,7 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
 header{
     background: #BBBBBB;
     padding: 20px 0;
@@ -89,11 +93,6 @@ footer{
     margin: 20px 0 0;
 }
 
-main{
-    width: 940px;
-    margin: 0 auto;
-}
-
 form{
     margin: 40px 0;
 }
@@ -158,6 +157,16 @@ td, th{
     text-align: center;
     font-size: 2em;
     margin: 0 0 1em;
+    /* Limpa o float. */
+    clear: left;
+    color: rgba(0, 0, 0, 0.9);
+}
+
+.principal{
+    padding: 3em 0;
+    background: #fefefe;
+    width: 940px;
+    margin: 0 auto;
 }
 
 .principal p{
@@ -172,6 +181,72 @@ td, th{
     font-style: italic;
 }
 
-.imagemBeneficios{
+.utensilios{
+    width: 150px;
+    /* Deixa o elemento flutuante com os outros elementos passando por em volta dele, mas não ocupando a área abaixo dele. 
+    Alternativa correta! Tanto o float:left quanto o float: right servem para que o elemento se destaque na tela, deixe de ocupar o espaço em que estava, para que os outros elementos possam se posicionar ao redor dele.
+    */
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.map{
+    padding: 3em 0;
+    background: linear-gradient(#fefefe, #888888);
+}
+
+.map-content{
+    width: 940px;
+    margin: 0 auto;
+}
+
+.map p{
+    margin: 0 0 2em;
+    text-align: center;
+}
+
+.beneficios{
+    padding: 3em 0;
+    background: #888888;
+}
+
+.conteudo-beneficios{
+    width: 640px;
+    margin: 0 auto;
+}
+
+.lista-beneficios{
+    width: 40%;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.itens{
+    line-height: 1.5;
+}
+.itens:before{
+    content: "★";
+}
+
+/* Dessa maneira, o primeiro item estará em negrito ao carregarmos o navegador. Dessa maneira criamos, via CSS, uma marcação. Além do first-child, temos a opção last-child que marcará o último item da lista. Isso é interessante, porque não precisaremos mais saber quantos itens existem na lista para passar configurações precisas, essa caracaterística é muito útil em manipulação de tabelas, por exemplo.
+Por fim, temos a possibilidade de selecionar qualquer elemento da lista por via do nth-child(), que receberá o número que quisermos, como por exemplo 4, que se refere ao quarto elemento da lista. Podemos ainda utilizar valores como 2n com o nth-child(), o que quer dizer marcamos todos os elementos pares da lista, isto é, o segundo, quarto e sexto elemento da lista ficam em negrito. */
+
+.itens:first-child{
+    font-weight: bold;
+}
+
+.imagem-beneficios{
     width: 60%;
+    opacity: 0.7;
+    transition: 400ms;
+    box-shadow: 10px 10px 30px 2px #000, -10px -10px 30px #f8f8f8;
+}
+
+.imagem-beneficios:hover{
+    opacity: 1;
+}
+
+.video{
+    width: 560px;
+    margin: 2em auto;
 }
