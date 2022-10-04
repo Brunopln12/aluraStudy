@@ -1,6 +1,6 @@
 .cabecalhoPrincipal .container{
-    display: flex;
     align-items: center;
+    display: flex;
     justify-content: space-between;
 }
 
@@ -14,10 +14,11 @@
 }
 
 .rodapePrincipal-patrocinadores-list{
-    display: flex;
     align-items: center;
-    width: 70%;
+    display: flex;
     justify-content: space-around;
+    margin-right: 5%;
+    width: 70%;
 }
 
 .rodapePrincipal-contatoForm{
@@ -26,4 +27,103 @@
 
 .rodapePrincipal-contatoForm-fieldset{
     display: flex;
+}
+
+.rodapePrincipal-navMap-list{
+    display: flex;
+    flex-flow: column wrap;
+    /* flex-direction: column;
+    flex-wrap: wrap; */
+    height: 260px;
+}
+
+.conteudoPrincipal-cursos{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.conteudoPrincipal-cursos-link{
+    margin: 1%;
+    width: 23%;
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n){
+    margin-right: 0; 
+}
+
+.conteudoPrincipal-cursos-link:nth-child(4n+1){
+    margin-left: 0; 
+}
+
+.videoSobre .container{
+    display: flex;
+}
+
+.videoSobre-sobre{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    flex-grow: 2;
+}
+
+.videoSobre-sobre-list{
+    flex-grow: 1;
+}
+
+.videoSobre-video{
+    flex-grow: 1;
+    flex-shrink: 2;
+}
+
+/* Mobile */
+
+@media (max-width: 768px){
+    .cabecalhoPrincipal-nav{
+       flex-direction: column;
+    }
+
+    .cabecalhoPrincipal .container{
+        align-items: initial;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .conteudoPrincipal-cursos{
+        flex-direction: column;
+    }
+
+    .conteudoPrincipal-cursos-link{
+        width: 100%;
+    }
+
+    .rodapePrincipal-navMap-list{
+        height: auto;
+    }
+
+    .rodapePrincipal-patrocinadores .container{
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .rodapePrincipal-patrocinadores-list{
+        margin: 0;
+        width: 100%;
+    }
+
+    .rodapePrincipal-contatoForm{
+        width: 100%;
+    }
+
+    .rodapePrincipal-contatoForm-fieldset{
+        justify-content: center;
+    }
+
+    .cabecalhoPrincipal-nav-link-app{
+        order: -1;
+    }
+
+    .videoSobre .container{
+        flex-direction: column;
+        align-items: center;
+    }
 }
