@@ -1,13 +1,20 @@
-// Função que toca o som selecionado
+// Seleciona todas as teclas do nosso teclado
 
-function tocaSomPom () {
-    document.querySelector('#som_tecla_pom').play();
+function tocaSom (idElementoAudio) {
+    document.querySelector(idElementoAudio).play();
 };
 
-function tocaSomClap () {
-    document.querySelector('#som_tecla_clap').play();
-};
+const listaDeTeclas = document.querySelectorAll('.tecla');
 
-// Devemos retirar os parênteses da função para que ela na toque imediatamente
+let contador = 0;
 
-document.querySelector('.tecla_pom').onclick = tocaSomPom;
+// enquanto
+
+while (contador < listaDeTeclas.length) {
+
+    listaDeTeclas[contador].onclick = tocaSom;
+
+    contador = contador + 1;
+
+    console.log(contador);
+}
