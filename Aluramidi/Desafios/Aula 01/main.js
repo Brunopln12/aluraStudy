@@ -6,9 +6,9 @@ for (let indice = 0; indice < listaDeTeclas.length; indice++) {
   tecla.onkeydown = function (evento) {
     if(evento.code === "Enter" || evento.code === "Space") {
     tecla.classList.add('ativa');
-    }
-  }
+    };
+  };
   tecla.onkeyup = function () {
     tecla.classList.remove('ativa');
-  }
-}
+  };
+};
