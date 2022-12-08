@@ -60,3 +60,23 @@ Conhecemos todos os quantifiers como ?, +, * e {n}.
 \s significa whitespace e é um atalho para [ \t\r\n\f].
 
 \w significa word char e é uma atalho para [A-Za-z0-9_].
+
+*O que aprendemos?*
+
+Existem âncoras predefinidas que selecionam uma posição dentro do alvo.
+
+\b é uma âncora que seleciona um word boundary, isso é o início ou fim da palavra.
+
+^ é uma âncora que seleciona o início da string alvo.
+
+$ é uma âncora que seleciona o fim do alvo.
+
+*O que aprendemos?*
+
+Declaramos um grupo com ().
+
+Podemos ter grupos e subgrupos.
+
+Um grupo é retornado na hora de executar, são úteis para selecionar uma parte do match.
+
+Através do ?:, dizemos que não queremos ver esse grupo na resposta
